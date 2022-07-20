@@ -39,6 +39,26 @@ class MockLocalDataSource extends _i1.Mock implements _i3.LocalDataSource {
               returnValue: Future<_i2.SlResponse<List<_i5.ContactModel>>>.value(
                   _FakeSlResponse_0<List<_i5.ContactModel>>()))
           as _i4.Future<_i2.SlResponse<List<_i5.ContactModel>>>);
+  @override
+  _i4.Future<_i2.SlResponse<_i5.ContactModel?>> addContact(
+          _i5.ContactModel? contact) =>
+      (super.noSuchMethod(Invocation.method(#addContact, [contact]),
+              returnValue: Future<_i2.SlResponse<_i5.ContactModel?>>.value(
+                  _FakeSlResponse_0<_i5.ContactModel?>()))
+          as _i4.Future<_i2.SlResponse<_i5.ContactModel?>>);
+  @override
+  _i4.Future<_i2.SlResponse<_i5.ContactModel?>> updateContact(
+          _i5.ContactModel? contact) =>
+      (super.noSuchMethod(Invocation.method(#updateContact, [contact]),
+              returnValue: Future<_i2.SlResponse<_i5.ContactModel?>>.value(
+                  _FakeSlResponse_0<_i5.ContactModel?>()))
+          as _i4.Future<_i2.SlResponse<_i5.ContactModel?>>);
+  @override
+  _i4.Future<_i2.SlResponse<bool>> deleteContact(_i5.ContactModel? contact) =>
+      (super.noSuchMethod(Invocation.method(#deleteContact, [contact]),
+              returnValue:
+                  Future<_i2.SlResponse<bool>>.value(_FakeSlResponse_0<bool>()))
+          as _i4.Future<_i2.SlResponse<bool>>);
 }
 
 /// A class which mocks [NetworkConnectivityChecker].

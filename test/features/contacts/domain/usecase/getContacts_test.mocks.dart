@@ -5,6 +5,8 @@
 import 'dart:async' as _i4;
 
 import 'package:flutter_base_project/src/core/sl_response.dart' as _i2;
+import 'package:flutter_base_project/src/features/contacts/data/models/contact_model.dart'
+    as _i5;
 import 'package:flutter_base_project/src/features/contacts/domain/repositories/contacts_repository.dart'
     as _i3;
 import 'package:mockito/mockito.dart' as _i1;
@@ -31,9 +33,30 @@ class MockContactsRepository extends _i1.Mock
   }
 
   @override
-  _i4.Future<_i2.SlResponse<dynamic>> getContacts() =>
+  _i4.Future<_i2.SlResponse<List<_i5.ContactModel>>> getContacts() =>
       (super.noSuchMethod(Invocation.method(#getContacts, []),
-              returnValue: Future<_i2.SlResponse<dynamic>>.value(
-                  _FakeSlResponse_0<dynamic>()))
-          as _i4.Future<_i2.SlResponse<dynamic>>);
+              returnValue: Future<_i2.SlResponse<List<_i5.ContactModel>>>.value(
+                  _FakeSlResponse_0<List<_i5.ContactModel>>()))
+          as _i4.Future<_i2.SlResponse<List<_i5.ContactModel>>>);
+  @override
+  _i4.Future<_i2.SlResponse<_i5.ContactModel?>> addContact(
+          _i5.ContactModel? contact) =>
+      (super.noSuchMethod(Invocation.method(#addContact, [contact]),
+              returnValue: Future<_i2.SlResponse<_i5.ContactModel?>>.value(
+                  _FakeSlResponse_0<_i5.ContactModel?>()))
+          as _i4.Future<_i2.SlResponse<_i5.ContactModel?>>);
+  @override
+  _i4.Future<_i2.SlResponse<_i5.ContactModel?>> updateContact(
+          _i5.ContactModel? contact) =>
+      (super.noSuchMethod(Invocation.method(#updateContact, [contact]),
+              returnValue: Future<_i2.SlResponse<_i5.ContactModel?>>.value(
+                  _FakeSlResponse_0<_i5.ContactModel?>()))
+          as _i4.Future<_i2.SlResponse<_i5.ContactModel?>>);
+  @override
+  _i4.Future<_i2.SlResponse<_i5.ContactModel?>> deleteContact(
+          _i5.ContactModel? contact) =>
+      (super.noSuchMethod(Invocation.method(#deleteContact, [contact]),
+              returnValue: Future<_i2.SlResponse<_i5.ContactModel?>>.value(
+                  _FakeSlResponse_0<_i5.ContactModel?>()))
+          as _i4.Future<_i2.SlResponse<_i5.ContactModel?>>);
 }

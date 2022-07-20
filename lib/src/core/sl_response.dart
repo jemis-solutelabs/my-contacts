@@ -6,17 +6,21 @@ class SlResponse<T> extends Equatable {
   //return [True] if response has exception
   final bool hasException;
 
-  final List<Exception>? exceptions;
+  final List<Exception> exceptions;
+
   ///return list of exceptions
   final T? response;
+
   /// object of expected return type
 
   @override
-  List<Object> get props => [msg, hasException, exceptions!, response!];
+  List<Object> get props => hasException
+      ? [msg, hasException, exceptions]
+      : [msg, hasException, exceptions, response!];
 
   SlResponse(
       {required this.msg,
       this.exceptions = const [],
       this.hasException = false,
-      this.response});
+       this.response});
 }
